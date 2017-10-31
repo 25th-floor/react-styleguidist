@@ -14,7 +14,7 @@ module.exports = function createServer(config, env) {
 		hot: true,
 		quiet: true,
 		watchOptions: {
-			ignored: /node_modules/,
+			ignored: '^(?!.*([/\\\\]src[/\\\\]node_modules[/\\\\])).*([/\\\\]node_modules[/\\\\])',
 		},
 		contentBase: config.assetsDir,
 		stats: webpackConfig.stats || {},
